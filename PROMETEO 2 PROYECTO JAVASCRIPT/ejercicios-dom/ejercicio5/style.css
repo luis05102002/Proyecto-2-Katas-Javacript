@@ -1,0 +1,106 @@
+/* style.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+  color: #f0f0f0;
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: #000;
+  border-bottom: 4px solid #c00;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 10px #c00;
+  color: #fff;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #aaa;
+}
+
+.albums-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.album-card {
+  background: #222;
+  border: 1px solid #444;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.album-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(200, 0, 0, 0.3);
+}
+
+.album-cover {
+  width: 100%;
+  height: 180px;
+  background: linear-gradient(45deg, #333, #555);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+  color: #c00;
+  text-shadow: 0 0 15px #000;
+}
+
+.album-info {
+  padding: 1.2rem;
+  text-align: center;
+}
+
+.album-info h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.album-info p {
+  font-size: 0.95rem;
+  color: #aaa;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #000;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+footer span[role="img"] {
+  font-size: 1.3rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+  .albums-container {
+    grid-template-columns: 1fr;
+  }
+}

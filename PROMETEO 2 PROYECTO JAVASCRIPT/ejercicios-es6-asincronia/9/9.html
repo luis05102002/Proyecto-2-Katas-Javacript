@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Aleatorio</title>
+    <script src="index.js" defer></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            color: #fff;
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        .pokemon-card {
+            background: white;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            max-width: 320px;
+            width: 100%;
+        }
+        .random-image {
+            width: 100%;
+            max-width: 280px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        .name {
+            margin-top: 15px;
+            font-size: 1.8rem;
+            color: #333;
+            font-weight: bold;
+        }
+        .loading {
+            color: #fff;
+            font-style: italic;
+        }
+        .reload-hint {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pokémon Aleatorio</h1>
+    <p>¡Recarga la página para ver otro!</p>
+
+    <div class="pokemon-card">
+        <p class="loading">Cargando Pokémon...</p>
+        <img class="random-image" src="" alt="Pokémon" style="display: none;">
+        <div class="name"></div>
+    </div>
+
+    <p class="reload-hint">Generación 1 (1–151)</p>
+</body>
+</html>
